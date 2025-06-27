@@ -8,5 +8,5 @@ router.post('/login', login);
 router.post('/logout', logout);
 
 // Secure getting connect user route
-router.get('/user', authMiddleware, connectUser);
+router.get('/connect-user', authMiddleware, connectUser);
 module.exports = router;
