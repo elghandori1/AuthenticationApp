@@ -1,4 +1,4 @@
-npm install bcryptjs jsonwebtoken cookie-parser
+npm install express cors dotenv bcryptjs jsonwebtoken cookie-parser express-rate-limit
 
 sql :
 CREATE DATABASE auth_db;
