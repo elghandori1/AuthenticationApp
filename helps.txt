@@ -1,4 +1,5 @@
-npm install express cors dotenv bcryptjs jsonwebtoken cookie-parser express-rate-limit
+server side: npm install express cors dotenv bcryptjs jsonwebtoken cookie-parser express-rate-limit
+client side: npm install axios react-router-dom
 
 sql :
 CREATE DATABASE auth_db;
