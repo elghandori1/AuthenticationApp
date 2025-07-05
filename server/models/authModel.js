@@ -16,7 +16,7 @@ class AuthModel {
   }
 
   static async findById(id) {
-    const [users] = await pool.query('SELECT id, name FROM users WHERE id = ?', [id]);
+    const [users] = await pool.query('SELECT id, name, email FROM users WHERE id = ?', [id]);
     return users[0];
   }
 

@@ -46,14 +46,14 @@ const login = async (req, res) => {
 
     const isValidPassword = await AuthModel.comparePasswords(password, user.password);
     if (!isValidPassword) {
-      return res.status(401).json({ message: 'Incorrect passwor' });
+      return res.status(401).json({ message: 'Incorrect password' });
     }
 
     const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
     res.cookie('token', token, {
       httpOnly: true,
-      secure: false, // true in production if using HTTPS
+      secure: process.env.NODE_ENV === 'production',
       sameSite: 'strict',
       maxAge: 3600000,
     });
