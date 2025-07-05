@@ -13,7 +13,7 @@ const loginLimiter = rateLimit({
 
 router.post('/register', register);
 router.post('/login',loginLimiter ,login);
-router.get('/logout', logout);
+router.get('/logout', authMiddleware,logout);
 
 // Secure getting connect user route
 router.get('/connect-user', authMiddleware, connectUser);

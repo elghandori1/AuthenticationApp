@@ -11,3 +11,5 @@ CREATE TABLE users (
   password VARCHAR(255) NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+for test with online mysql database : console.clever-cloud.com
