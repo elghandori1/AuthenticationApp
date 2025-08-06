@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axiosClient from '../api/axiosClient';
 import useAuth from '../auth/useAuth';
+import ErrorMessage from "../components/ErrorMessage";
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -25,7 +26,7 @@ const Login = () => {
   return (
     <div className="container mx-auto mt-8 p-4 max-w-md">
       <h1 className="text-2xl font-bold text-center mb-4">Login</h1>
-      {error && <p className="text-red-500 text-center">{error}</p>}
+      {error && <ErrorMessage message={error} onClose={() => setError("")} />}
       <div className="bg-white p-6 rounded shadow-md">
         <div>
           <label className="block text-gray-700 mb-2">Email</label>
