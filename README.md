@@ -51,6 +51,7 @@ client/
 │   │   ├── Navbar.jsx
 │   │   ├── Footer.jsx
 │   │   ├── NotFound.jsx
+|   |   ├── ErrorMessage.jsx
 │   ├── pages/
 │   │   ├── Home.jsx
 │   │   ├── Login.jsx
